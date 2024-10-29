@@ -14,10 +14,12 @@ public class AzureLogin  {
         this.driver=driver;
     }
 
-    public void login (){
+    public void login () throws InterruptedException {
+        Thread.sleep(3000);
 
         Actions action =new Actions(driver);
-        action.sendKeys("dsharaf").perform();
+        action.sendKeys(Keys.TAB).perform();
+        action.sendKeys("dfrertse").perform();
         action.sendKeys(Keys.TAB).perform();
         action .sendKeys("SDFDG").perform();
         action.sendKeys(Keys.ENTER).perform();

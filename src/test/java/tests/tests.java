@@ -14,13 +14,14 @@ public class tests {
 
     @BeforeMethod
     public void inintialization() throws InterruptedException {
-        ChromeDriver driver = new ChromeDriver();
+         driver = new ChromeDriver();
         driver.get("https://azure.2p.com.sa/Projects/IPMA/_backlogs/backlog/IPMA%20Team/Epics.");
         //Thread.sleep(5000);
     }
     @Test
-public void login (){
+public void login () throws InterruptedException {
         login =new AzureLogin(driver);
+        login.login();
 
 }
 
